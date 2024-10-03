@@ -1,3 +1,5 @@
+![Cargo build](https://github.com/RustStudio/opcua_server/actions/workflows/build.yaml/badge.svg) ![Cargo test](https://github.com/RustStudio/opcua_server/actions/workflows/test.yaml/badge.svg) ![Cargo format](https://github.com/RustStudio/opcua_server/actions/workflows/format.yaml/badge.svg)
+
 # OPC-UA server template
 
 # Usage

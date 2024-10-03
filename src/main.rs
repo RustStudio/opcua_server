@@ -16,14 +16,15 @@
  *
 */
 // =========================================================================================================================
-use std::path::PathBuf;
-use std::sync::Arc;
 use opcua::server::prelude::*;
 use opcua::sync::Mutex;
+use std::path::PathBuf;
+use std::sync::Arc;
 
 fn main() {
     // Create an OPC UA server with sample configuration and default node set
-    let mut server = Server::new(ServerConfig::load(&PathBuf::from("assets/opcua_server.conf")).unwrap());
+    let mut server =
+        Server::new(ServerConfig::load(&PathBuf::from("assets/opcua_server.conf")).unwrap());
 
     let ns = {
         let address_space = server.address_space();
@@ -47,7 +48,6 @@ fn add_example_variables(server: &mut Server, ns: u16) {
     let v2_node = NodeId::new(ns, "v2");
     let v3_node = NodeId::new(ns, "v3");
     let v4_node = NodeId::new(ns, "v4");
-    
 
     let address_space = server.address_space();
     // The address space is guarded so obtain a lock to change it
